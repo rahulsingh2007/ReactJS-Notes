@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ThemeDataContext } from "../Context/ThemeContext"
+import { ThemeDataContext } from "../Context/ThemeDataContext"
 
 const Nav2 = () => {
     const [theme] = useContext(ThemeDataContext)
