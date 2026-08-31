@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { ThemeDataContext } from "../Context/ThemeContext"
 
 const Nav2 = () => {
-    const [theme, setTheme] = useContext(ThemeDataContext)
+    const [theme] = useContext(ThemeDataContext)
 
     return (
         <div className='nav2'>

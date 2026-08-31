@@ -2,16 +2,21 @@ import { useContext } from 'react';
 import { ThemeDataContext } from '../Context/ThemeContext';
 
 const Button = () => {
-    const [theme, setTheme] = useContext(ThemeDataContext)
+    // Destructuring state array properly
+    const [theme, setTheme] = useContext(ThemeDataContext);
 
     const changeTheme = () => {
-        setTheme('dark')
-    }
-    return (
-        <div >
-            <button onClick={changeTheme}>Change Theme</button>
-        </div>
-    )
-}
+        // Toggles back and forth dynamically
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    };
 
-export default Button
+    return (
+        <div>
+            <button onClick={changeTheme}>
+                Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+            </button>
+        </div>
+    );
+};
+
+export default Button;

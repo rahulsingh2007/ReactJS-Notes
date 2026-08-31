@@ -6,21 +6,23 @@
 }
 
 .light {
-  background-color: lightgreen;
+  background-color: #a9a7a7;
+  color: #000000;
+  transition: all 0.3s ease;
   display: flex;
-  color: white;
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
 }
 
 .dark {
-  background-color: darkgreen;
+  background-color: #1a1a1a;
   display: flex;
   color: white;
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .nav2 {

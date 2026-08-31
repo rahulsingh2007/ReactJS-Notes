@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 183, 255);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.4s ease;
+}
