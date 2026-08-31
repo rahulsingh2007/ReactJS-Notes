@@ -1,13 +1,10 @@
-import { useState, createContext } from "react";
-
-// The context tracking our data
-export const ThemeDataContext = createContext(null);
+import { useState } from "react";
+import { ThemeDataContext } from "./ThemeDataContext"; 
 
 const ThemeContext = ({ children }) => {
     const [theme, setTheme] = useState("light");
 
     return (
-        // Stripped out the <div> wrapper to prevent layout breaking
         <ThemeDataContext.Provider value={[theme, setTheme]}>
             {children}
         </ThemeDataContext.Provider>
