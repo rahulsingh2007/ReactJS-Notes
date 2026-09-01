@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+@property --color-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #00b7ff;
+}
+
+@property --color-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #0026ff;
+}
+
+button {
+  background: linear-gradient(90deg, var(--color-1) 0%, #0088ff 50%, var(--color-2) 100%);
+  padding: 10px 12px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.4s ease, --color-1 0.4s ease, --color-2 0.4s ease;
+}
+
+button:hover {
+  transform: scale(0.95);
+  --color-1: #0015ff;
+  --color-2: #00b7ff;
+}
