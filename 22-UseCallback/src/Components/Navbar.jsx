@@ -1,13 +1,12 @@
 import { memo } from "react";
 
-const Navbar = ({ adjective, getAdjective }) => {
-    console.log('Navbar is rendered.');
-    return (
-        <div>
-            I am a {adjective} Navbar
-            <button onClick={() => getAdjective()}>{getAdjective()}</button>
-        </div>
-    )
-}
+const Navbar = ({ displayMessage }) => {
+  console.log("🎨 Navbar rendered!");
 
-export default memo(Navbar)
+  return (
+    <h1>{displayMessage()}</h1>
+  );
+};
+
+// memo tells React: "Only re-render if displayMessage actually changes"
+export default memo(Navbar);
